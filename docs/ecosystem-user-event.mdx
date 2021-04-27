@@ -166,7 +166,7 @@ test('delete characters within the selectedRange', () => {
   render(
     <div>
       <label htmlFor="my-input">Example:</label>
-      <input id="my-input" type="text" value="This is a bad example" />
+      <input id="my-input" type="text" defaultValue="This is a bad example" />
     </div>
   )
   const input = screen.getByLabelText(/example/i)

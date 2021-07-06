@@ -70,7 +70,7 @@ constructor documentation for more options.
 Note that `click` will trigger hover events before clicking. To disable this,
 set the `skipHover` option to `true`.
 
-### `dblClick(element, eventInit, options)`
+### `dblClick(element, eventInit)`
 
 Clicks `element` twice, depending on what `element` is it can have different
 side effects.
@@ -117,7 +117,8 @@ to `await`!
 > Otherwise everything runs synchronously and you can ignore the promise.
 
 `type` will click the element before typing. To disable this, set the
-`skipClick` option to `true`.
+`skipClick` option to `true`. You will then need to focus the element
+yourself before calling `type`.
 
 #### Special characters
 
@@ -166,7 +167,7 @@ test('delete characters within the selectedRange', () => {
   render(
     <div>
       <label htmlFor="my-input">Example:</label>
-      <input id="my-input" type="text" value="This is a bad example" />
+      <input id="my-input" type="text" defaultValue="This is a bad example" />
     </div>
   )
   const input = screen.getByLabelText(/example/i)
